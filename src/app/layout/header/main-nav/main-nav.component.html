@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+              true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/blog" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:
+              true}">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+              true}">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact-us" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+              true}">Contact Us</a>
+        </li>
+
+        <li class="nav-item dropdown has-megamenu">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Mega menu </a>
+          <div class="dropdown-menu megamenu" role="menu">
+            <div class="conatiner">
+              This is content of megamenu. <br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </div>
+          </div> <!-- dropdown-mega-menu.// -->
+        </li>
+
+
+
+
+      </ul>
+      <span class="navbar-text">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" *ngIf="!isLogin" routerLink="/login" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:
+                    true}">Login</a>
+            <a class="nav-link" *ngIf="isLogin"><img class="profile" routerLink="/user" alt="profile"
+                src="assets/images/profile/man.png"></a>
+          </li>
+        </ul>
+      </span>
+
+
+      <!-- <span class="navbar-text">
+          Navbar text with an inline element
+        </span> -->
+    </div>
+  </div>
+</nav>
